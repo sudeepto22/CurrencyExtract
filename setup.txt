@@ -1,0 +1,24 @@
+CREATE DATABASE currency_extract;
+
+use currency_extract;
+
+create table if not exists country_currency_tbl (
+	    country varchar(255),
+	    currency varchar(255),
+	    currency_code varchar(10)
+    ) ENGINE=INNODB;
+
+
+create table if not exists currency_history_tbl (
+	    CID INT AUTO_INCREMENT PRIMARY KEY,
+	    currency_code varchar(10),
+	    value double,
+	    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    ) ENGINE=INNODB;
+
+
+create table if not exists currency_tbl (
+		currency_code varchar(10) PRIMARY KEY,
+	    value double,
+	    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    ) ENGINE=INNODB;
