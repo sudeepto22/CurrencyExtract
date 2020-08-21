@@ -44,10 +44,9 @@ class DBHelper(object):
     def insert_country_currency(self, data: List[CountryCurrency]):
         """
         Transform the data so that it is SQL query compatible
-        REPLACE the data in CURRENCY table
-        INSERT the data in CURRENCY_HISTORY table
+        REPLACE the data in COUNTRY CURRENCY table
 
-        :param data: List[Currency]
+        :param data: List[CountryCurrency]
         :return: None
         """
         cursor = self.database_connection.cursor()
