@@ -2,9 +2,9 @@ from enum import Enum
 
 
 class DBConfig(Enum):
-    HOST: str = 'localhost'
-    USER: str = 'sudeepto'
-    PASSWORD: str = 'Sudeepto22$'
+    HOST: str = '<HOST>'
+    USER: str = '<USERNAME>'
+    PASSWORD: str = '<PASSWORD>'
 
     DATABASE: str = 'currency_extract'
 

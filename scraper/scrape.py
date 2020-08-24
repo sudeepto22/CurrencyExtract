@@ -31,7 +31,8 @@ class CurrencyScrape(object):
                 })
                 continue
             url: str = APIConfig.URL.value.format(currency)
-            res = requests.get(url)
+
+            res = requests.get(url=url)
             soup: BeautifulSoup = BeautifulSoup(res.text, features='html.parser')
 
             classes: list = APIConfig.DIV_CLASSES.value
@@ -51,6 +52,7 @@ class CurrencyScrape(object):
                         'currency_code': currency,
                         'value': data.split()[0]
                     })
+
         return currency_value
 
     def get_data(self) -> List[Currency]:

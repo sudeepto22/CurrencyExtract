@@ -5,7 +5,7 @@ USE currency_extract;
 CREATE TABLE IF NOT EXISTS country_currency_tbl (
 	    country VARCHAR(255),
 	    currency VARCHAR(255),
-	    currency_code VARCHAR(10)
+	    currency_code VARCHAR(10) PRIMARY KEY
     ) ENGINE=INNODB;
 
 
